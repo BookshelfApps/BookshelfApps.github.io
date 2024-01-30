@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?&family=Roboto:wght@400;700&display=swap");
+
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+input,
+button {
+  font-family: "Roboto", sans-serif;
+}
+
+input,
+button {
+  font-size: 16px;
+}
+
+.header {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: blue;
+  color: white;
+  position: sticky;
+  top: 0;
+}
+
+main {
+  max-width: 1400px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.main-aside {
+  flex: 1;
+  display: flex;
+  gap: 5px;
+}
+
+.aside {
+  flex: 1;
+  display: flex;
+}
+
+.section_input {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  border: 1px solid black;
+  border-radius: 15px;
+}
+
+.section_input > h2 {
+  text-align: center;
+  color: blue;
+}
+
+.section_input > form > .input {
+  margin: 7px 0;
+}
+
+.section_input > form > button {
+  background-color: blue;
+  color: white;
+  border: 0;
+  border-radius: 6px;
+  display: block;
+  float: right;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.section_input > form > button > span {
+  font-weight: bold;
+}
+
+.section_input > form > .input > input {
+  display: block;
+  width: 100%;
+  padding: 7px;
+  border-radius: 6px;
+}
+
+.section_input > form > .input > label {
+  color: blue;
+  font-weight: bold;
+}
+
+.section_input > form > .input_inline {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.section_input > form > .input_inline > label {
+  color: blue;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.section_search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid black;
+  border-radius: 15px;
+}
+
+.section_search > h2 {
+  text-align: center;
+  color: blue;
+}
+
+.section_search > form {
+  width: 100%;
+  display: block;
+  grid-template-columns: auto 1fr 0.5fr;
+  grid-gap: 10px;
+  margin: 15px 0;
+}
+
+.section_search > form > label {
+  display: flex;
+  align-items: center;
+  color: blue;
+  font-weight: bold;
+}
+
+.section_search > form > input {
+  padding: 7px;
+  border-radius: 6px;
+  width: 90.5%;
+}
+
+.section_search > form > button {
+  background-color: transparent;
+  border: 0;
+  width: 6%;
+  margin-right: 7px;
+  float: right;
+}
+
+.book_shelf {
+  margin: 16px 0 0 0;
+  border: 1px solid black;
+  padding: 16px;
+  border-radius: 15px;
+  display: block;
+}
+
+.book_shelf > h2 {
+  color: blue;
+}
+
+.book_shelf > .book_list {
+  padding: 16px;
+}
+
+.book_shelf > .book_list > .book_item > h3,
+p {
+  margin: 8px 0;
+}
+
+.inner > h3 {
+  background-color: blue;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.inner > p {
+  font-weight: bold;
+  color: blue;
+  padding-left: 5px;
+}
+
+.item {
+  padding: 8px 16px 16px 16px;
+  border: 1px solid black;
+  border-radius: 6px;
+  margin: 10px 0;
+}
+
+#trash {
+  background-color: transparent;
+  border: none;
+  float: right;
+}
+
+i {
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.ph-x-circle {
+  color: yellow;
+}
+
+.ph-trash {
+  color: red;
+}
+
+.ph-check-circle {
+  color: green;
+}
+
+.main {
+  display: flex;
+  gap: 5px;
+}
+
+.utama {
+  flex: 5;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem 2rem;
+}
+
+.cari {
+  flex: 3;
+  height: 40%;
+}
+
+footer {
+  padding: 20px;
+  color: white;
+  background-color: blue;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .main-aside {
+    flex-direction: column;
+  }
+
+  .main {
+    flex-flow: column nowrap;
+  }
+
+  .main cari {
+    align-self: center;
+  }
+}
