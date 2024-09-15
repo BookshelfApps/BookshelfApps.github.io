@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bookshelf Apps</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script src="dist/sweetalert2.all.min.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <h1 class="header_title">Bookshelf Apps</h1>
+  </header>
+  <main>
+    <div class="main">
+      <section class="section_input utama">
+        <h2>Tambahkan Buku Baru</h2>
+        <form id="inputBook" data-testid="bookForm">
+          <div class="input">
+            <label for="inputBookTitle">Judul</label>
+            <input id="inputBookTitle" type="text" placeholder="Romeo and Juliet" required
+              data-testid="bookFormTitleInput">
+          </div>
+          <div class="input">
+            <label for="inputBookAuthor">Penulis</label>
+            <input id="inputBookAuthor" type="text" placeholder="William Shakespeare" required
+              data-testid="bookFormAuthorInput">
+          </div>
+          <div class="input">
+            <label for="inputBookYear">Tahun</label>
+            <input id="inputBookYear" type="number" placeholder="1597" required data-testid="bookFormYearInput" </div>
+            <div class="input_inline">
+              <label for="inputBookIsComplete">Selesai dibaca</label>
+              <input id="inputBookIsComplete" type="checkbox" data-testid="bookFormIsCompleteCheckbox">
+            </div>
+            <button class="bookSubmit" id="bookSubmit" type="submit" data-testid="bookFormSubmitButton"><span>Masukkan Buku ke
+                Rak</span></button>
+        </form>
+      </section>
+
+      <section class="section_search cari">
+        <h2>Cari Buku (Opsional)</h2>
+        <form id="searchBook" data-testid="searchBookForm">
+          <label for="searchBookTitle">Judul</label>
+          <input id="searchBookTitle" type="text" placeholder="Romeo and Juliet" data-testid="searchBookFormTitleInput">
+          <button id="searchSubmit" type="submit"><i class="ph ph-magnifying-glass"
+              data-testid="searchBookFormSubmitButton"></i></button>
+        </form>
+      </section>
+
+      <div id="editModal" style="display:none;">
+        <form id="editBookForm">
+          <label for="editTitle">Judul:</label>
+          <input type="text" id="editTitle" required>
+          <label for="editAuthor">Penulis:</label>
+          <input type="text" id="editAuthor" required>
+          <label for="editYear">Tahun:</label>
+          <input type="number" id="editYear" required>
+          <div class="input_inline>
+          <label for="editIsComplete">Selesai dibaca:</label>
+          <input type="checkbox" id="editIsComplete">
+        </div>
+        <div class="UC_Button">
+          <button type="submit">Update</button>
+          <button type="button" onclick="closeEditForm()">Cancel</button>
+        </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="main-aside">
+      <section class="book_shelf aside">
+        <h2>Belum selesai dibaca</h2>
+
+        <div id="incompleteBookshelfList" class="book_list" data-testid="incompleteBookList">
+          <article class="book_item">
+            <div class="action" id="belum">
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="book_shelf aside">
+        <h2>Selesai dibaca</h2>
+
+        <div id="completeBookshelfList" class="book_list" data-testid="completeBookList">
+          <article class="book_item">
+            <div class="action" id="selesai">
+            </div>
+          </article>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>Web Zulfan Fahri &#169; 2024 Bookshelf Apps</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

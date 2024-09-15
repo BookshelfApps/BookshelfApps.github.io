@@ -1,0 +1,332 @@
+@import url("https://fonts.googleapis.com/css2?&family=Roboto:wght@400;700&display=swap");
+
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+input,
+button {
+  font-family: "Roboto", sans-serif;
+}
+
+input,
+button {
+  font-size: 16px;
+}
+
+input {
+  border: none;
+  background-color: #e7e7e7e7;
+}
+
+.header {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #05284e;
+  color: white;
+  position: sticky;
+  top: 0;
+}
+
+main {
+  max-width: 1400px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.main-aside {
+  flex: 1;
+  display: flex;
+  gap: 5px;
+}
+
+.aside {
+  flex: 1;
+  display: flex;
+}
+
+.section_input {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+}
+
+.section_input > h2 {
+  text-align: center;
+  color: #05284e;
+}
+
+.section_input > form > .input {
+  margin: 7px 0;
+}
+
+.bookSubmit {
+  background-color: #05284e;
+  color: white;
+  border: 0;
+  border-radius: 6px;
+  display: block;
+  float: right;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.section_input > form > button > span {
+  font-weight: bold;
+}
+
+.section_input > form > .input > input {
+  display: block;
+  width: 100%;
+  padding: 7px;
+  border-radius: 6px;
+}
+
+.section_input > form > .input > label {
+  color: #05284e;
+  font-weight: bold;
+}
+
+.section_input > form > .input_inline {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.section_input > form > .input_inline > label {
+  color: #05284e;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.section_search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+}
+
+.section_search > h2 {
+  text-align: center;
+  color: #05284e;
+}
+
+.section_search > form {
+  width: 100%;
+  display: block;
+  grid-template-columns: auto 1fr 0.5fr;
+  grid-gap: 10px;
+  margin: 15px 0;
+}
+
+.section_search > form > label {
+  display: flex;
+  align-items: center;
+  color: #05284e;
+  font-weight: bold;
+}
+
+.section_search > form > input {
+  padding: 7px;
+  border-radius: 6px;
+  width: 90.5%;
+}
+
+.section_search > form > button {
+  background-color: transparent;
+  border: 0;
+  width: 6%;
+  margin-right: 7px;
+  float: right;
+}
+
+.book_shelf {
+  margin: 16px 0 0 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  border-radius: 15px;
+  display: block;
+}
+
+.book_shelf > h2 {
+  color: #05284e;
+}
+
+.book_shelf > .book_list {
+  padding: 16px;
+}
+
+.book_shelf > .book_list > .book_item > h3,
+p {
+  margin: 8px 0;
+}
+
+.inner > h3 {
+  background-color: #05284e;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.inner > p {
+  font-weight: bold;
+  color: #05284e;
+  padding-left: 5px;
+}
+
+.item {
+  padding: 8px 16px 16px 16px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  margin: 10px 0;
+}
+
+#trash {
+  background-color: transparent;
+  border: none;
+  float: right;
+}
+
+i {
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.ph-x-circle {
+  color: yellow;
+}
+
+.ph-trash {
+  color: red;
+}
+
+.ph-check-circle {
+  color: green;
+}
+
+.ph-pencil-line{
+  color: blue;
+}
+
+.UC_Button{
+  float: right;
+}
+
+.main {
+  display: flex;
+  gap: 5px;
+}
+
+.utama {
+  flex: 5;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem 2rem;
+}
+
+.cari {
+  flex: 3;
+  height: 40%;
+}
+
+footer {
+  padding: 20px;
+  color: white;
+  background-color: #05284e;
+  text-align: center;
+}
+
+#editModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  color: #05284e;
+}
+
+#editModal form {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px;
+  max-width: 90%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#editModal label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+#editModal input[type="text"],
+#editModal input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #05284e;
+}
+
+#editModal input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+#editModal button {
+  background-color: #05284e;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+#editModal button[type="button"] {
+  background-color: #6c757d;
+}
+
+#editModal button:hover {
+  background-color: #0056b3;
+}
+
+#editModal button[type="button"]:hover {
+  background-color: #5a6268;
+}
+
+@media screen and (max-width: 768px) {
+  .main-aside {
+    flex-direction: column;
+  }
+
+  .main {
+    flex-flow: column nowrap;
+  }
+
+  .main cari {
+    align-self: center;
+  }
+}
